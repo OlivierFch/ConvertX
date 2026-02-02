@@ -9,11 +9,8 @@ export default tseslint.config(
       "padded-blocks": ["error", "never"],
       "padding-line-between-statements": [
         "error",
-        // une ligne vide après les déclarations de variables
         { blankLine: "always", prev: ["const", "let", "var"], next: "*" },
-        // mais pas entre déclarations consécutives
         { blankLine: "any", prev: ["const", "let"], next: ["const", "let"] },
-        // une ligne vide avant return
         { blankLine: "always", prev: "*", next: "return" }
       ],
       "indent": ["error", 2, { "SwitchCase": 1 }]
